@@ -9,10 +9,9 @@ with st.sidebar:
     "Drawing Tool:",
     ("freedraw", "line", "rect", "circle", "transform", "polygon", "point"),
   )
-  
-stroke_width = st.slider("Select your line width", 1, 30, 15)
-stroke_color = st.color_picker("Stroke color", "#FFFFFF", key="stroke")
-bg_color = st.color_picker("Canvas color", "#000000", key = "background")
+  stroke_width = st.slider("Select your line width", 1, 30, 15)
+  stroke_color = st.color_picker("Stroke color", "#FFFFFF", key="stroke")
+  bg_color = st.color_picker("Canvas color", "#000000", key = "background")
 
 # Create a canvas component
 canvas_result = st_canvas(
