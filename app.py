@@ -12,7 +12,7 @@ with st.sidebar:
   stroke_width = st.slider("Select your line width", 1, 30, 15, key = "stroke size")
   stroke_color = st.color_picker("Stroke color", "#FFFFFF", key="stroke")
   bg_color = st.color_picker("Canvas color", "#000000", key = "background")
-  bg_size = st.slider("Board Size", 1,  30, 15, key = "bg size")
+  bg_size = st.slider("Board Size", 1,  200, 100, key = "bg size")
 
 # Create a canvas component
 canvas_result = st_canvas(
@@ -20,8 +20,8 @@ canvas_result = st_canvas(
   stroke_width = stroke_width,
   stroke_color = stroke_color,
   background_color = bg_color,
-  height = 300*bg_size,
-  width = 500*bg_size,
+  height = 3*bg_size,
+  width = 5*bg_size,
   drawing_mode = drawing_mode,
   key = "canvas",
 )
