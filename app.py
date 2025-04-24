@@ -9,9 +9,10 @@ with st.sidebar:
     "Drawing Tool:",
     ("freedraw", "line", "rect", "circle", "transform", "polygon", "point"),
   )
-  stroke_width = st.slider("Select your line width", 1, 30, 15)
+  stroke_width = st.slider("Select your line width", 1, 30, 15, key = "stroke size")
   stroke_color = st.color_picker("Stroke color", "#FFFFFF", key="stroke")
   bg_color = st.color_picker("Canvas color", "#000000", key = "background")
+  bg_size = st.slider("Board Size", 1,  30, 15, key = "bg size"))
 
 # Create a canvas component
 canvas_result = st_canvas(
@@ -19,8 +20,8 @@ canvas_result = st_canvas(
   stroke_width = stroke_width,
   stroke_color = stroke_color,
   background_color = bg_color,
-  height = 300,
-  width = 500,
+  height = 300*bg_size,
+  width = 500*bg_size,
   drawing_mode = drawing_mode,
   key = "canvas",
 )
