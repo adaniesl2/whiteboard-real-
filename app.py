@@ -1,4 +1,7 @@
-st.title("Tablero para dibujo")
+import streamlit as st
+from streamlit_drawable_canvas import st_canvas
+
+st.title("Drawing Board")
 
 with st.sidebar: 
   st.subheader("Board Properties")
