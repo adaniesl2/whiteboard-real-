@@ -23,6 +23,6 @@ canvas_result = st_canvas(
   height = 300,
   width = 500,
   drawing_mode = drawing_mode,
-  keys = "canvas",
+  key = "canvas",
 )
 
