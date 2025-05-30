@@ -1,7 +1,10 @@
 import streamlit as st
 from streamlit_drawable_canvas import st_canvas
+from PIL import Image
 
 st.title("Drawing Board")
+image = Image.open('Smeargle.png')
+st.image(image, width=350)
 
 with st.sidebar: 
   st.subheader("Board Properties")
